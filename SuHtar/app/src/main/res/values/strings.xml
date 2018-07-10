@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SuHtar</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="first_page">First Page</string>
+    <string name="second_page">Second Page</string>
+    <string name="third_page">Third Page</string>
+    <string name="fourth_page">Fourth Page</string>
 </resources>
