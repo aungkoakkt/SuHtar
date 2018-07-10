@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.aungko.suhtar.budget_process.BudgetFragment;
+import com.example.aungko.suhtar.home_process.HomeFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.menu_home:
                 //Check the Item
                 item.setChecked(true);
-           //     changeFragment(new BudgetFragment());
+                changeFragment(new HomeFragment());
                 break;
             case R.id.menu_wallet:
                 //Check the Item
@@ -65,5 +66,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.fr_main,fragment);
         ft.commit();
+
     }
 }

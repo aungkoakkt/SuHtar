@@ -113,7 +113,7 @@ public class IntroSliderActivity extends AppCompatActivity {
         for(i =0 ; i < dotText.length; i++) {
             dotText[i] = new TextView(this);
             dotText[i].setText(Html.fromHtml("&#8226;"));
-            dotText[i].setTextSize(25);
+            dotText[i].setTextSize(30);
             dotText[i].setTextColor(Color.parseColor("#a9b4bb"));
             dotLayout.addView(dotText[i]);
         }
