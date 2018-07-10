@@ -26,10 +26,10 @@ public class IntroSliderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (!isFirstTimeStartApp()){
-            startMainActivity();
-            finish();
-        }
+//        if (!isFirstTimeStartApp()){
+//            startMainActivity();
+//            finish();
+//        }
 
         setContentView(R.layout.activity_intro_slider);
 

@@ -1,5 +1,7 @@
 package com.example.aungko.suhtar;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -11,6 +13,7 @@ import android.widget.FrameLayout;
 
 import com.example.aungko.suhtar.budget_process.BudgetFragment;
 import com.example.aungko.suhtar.home_process.HomeFragment;
+import com.example.aungko.suhtar.wallet_process.WalletFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,6 +32,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         changeFragment(new HomeFragment());
         bnv_main.setOnNavigationItemSelectedListener(this);
 
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("SuHtar", MODE_PRIVATE);
+        boolean flag= sharedPreferences.getBoolean("SuHtar", true);
+
+        if(flag){
+            startActivity(new Intent(this,IntroSliderActivity.class));
+            finish();
+        }
+
     }
 
     @Override
@@ -46,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.menu_wallet:
                 //Check the Item
                 item.setChecked(true);
-          //      changeFragment(new BudgetFragment());
+                changeFragment(new WalletFragment());
                 break;
             case R.id.menu_budget:
                 //Check the Item

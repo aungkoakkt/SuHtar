@@ -9,4 +9,5 @@
     <color name="edit_text_bgcolor">#5A7090</color>
     <color name="btn_confirm">#EFC75E</color>
     <color name="btn_cancel">#d2c4c4c4</color>
+    <color name="color_category">#3A5175</color>
 </resources>

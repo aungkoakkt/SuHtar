@@ -26,7 +26,6 @@
             app:collapsedTitleGravity="center"
             app:expandedTitleGravity="center"
             app:expandedTitleMarginBottom="190dp"
-            app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <android.support.constraint.ConstraintLayout
