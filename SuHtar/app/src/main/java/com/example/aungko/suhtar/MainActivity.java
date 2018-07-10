@@ -1,19 +1,69 @@
 package com.example.aungko.suhtar;
 
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.widget.FrameLayout;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.aungko.suhtar.budget_process.BudgetFragment;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+
+    @BindView(R.id.fr_main)FrameLayout fr_main;
+    @BindView(R.id.bnv_main)BottomNavigationView bnv_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.main);
+        ButterKnife.bind(this);
 
-        getSupportActionBar().setTitle(null);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        bnv_main.setOnNavigationItemSelectedListener(this);
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        if (item.isChecked())
+            item.setChecked(false);
+
+        switch (item.getItemId()) {
+            case R.id.menu_home:
+                //Check the Item
+                item.setChecked(true);
+           //     changeFragment(new BudgetFragment());
+                break;
+            case R.id.menu_wallet:
+                //Check the Item
+                item.setChecked(true);
+          //      changeFragment(new BudgetFragment());
+                break;
+            case R.id.menu_budget:
+                //Check the Item
+                item.setChecked(true);
+                changeFragment(new BudgetFragment());
+                break;
+            case R.id.menu_profile:
+                //Check the Item
+                item.setChecked(true);
+             //   changeFragment(new BudgetFragment());
+                break;
+
+        }
+        return true;
+    }
+
+    private void changeFragment(Fragment fragment){
+        FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.fr_main,fragment);
+        ft.commit();
     }
 }

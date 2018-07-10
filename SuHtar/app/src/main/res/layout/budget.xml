@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent">
+    
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_budget"
+        android:layout_width="match_parent"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/budget"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_below="@id/tb_budget"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/tb_budget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+        <TextView
+            android:layout_alignParentStart="true"
+            android:id="@+id/tv_budget_title11"
+            android:text="သတ်မှတ်သုံးမည့်ပမာဏ"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:background="@drawable/edit_text_bg1"
+            android:id="@+id/et_budget_bgamount"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="4dp"
+            android:layout_below="@id/tv_budget_title11"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:gravity="center|left"
+            android:textSize="16sp"
+            android:text="၁၀၀၀၀၀"
+            android:textColor="@color/textColor"/>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/tv_budget_currency"
+            android:layout_below="@id/tv_budget_title11"
+            android:text="MMK"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/edit_text_bg2"
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/et_budget_bgamount"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/tv_budget_title2"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:text="စတင်အသုံးပြုမည့်ရက်"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_below="@id/et_budget_bgamount"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/tv_budget_start_date"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:text="၄-၇-၂၀၁၈"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/textColor"
+            android:layout_below="@id/et_budget_bgamount"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/tv_budget_title3"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:text="အသုံးပြုမည့်အချိန်အပိုင်းအခြား"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_below="@id/tv_budget_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <Spinner
+            android:id="@+id/tv_budget_period"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/textColor"
+            android:layout_below="@id/tv_budget_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/tv_budget_title4"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:text="နေ့စဥ်အသုံးစရိတ်ပေးပို့ရန်"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_below="@id/tv_budget_title3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <Switch
+            android:id="@+id/sw_budget_noti"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_budget_title3"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/button_confirm_bg"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/tv_budget_title4"
+            android:text="အတည်ပြုမည်"
+            android:layout_alignParentLeft="true"
+            android:elevation="30dp"
+            android:layout_width="150dp"
+            android:layout_height="35dp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/button_cancel_bg"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/tv_budget_title4"
+            android:text="ပယ်ဖျက်မည်"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:elevation="30dp"
+            android:layout_width="150dp"
+            android:layout_height="35dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

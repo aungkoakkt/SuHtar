@@ -6,4 +6,8 @@
     <string name="second_page">Second Page</string>
     <string name="third_page">Third Page</string>
     <string name="fourth_page">Fourth Page</string>
+    <string name="home">မူလနေရာ</string>
+    <string name="wallet">ပိုက်ဆံအိတ်</string>
+    <string name="budget">သတ်မှတ်သုံးငွေ</string>
+    <string name="profile">ကိုယ်ရေးအချက်အလက်</string>
 </resources>
