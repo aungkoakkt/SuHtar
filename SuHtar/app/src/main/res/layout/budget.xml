@@ -23,14 +23,17 @@
 
     <RelativeLayout
         android:layout_below="@id/tb_budget"
-        android:visibility="invisible"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_budget"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
            />
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_below="@id/tb_budget"
         android:layout_width="match_parent"
@@ -41,7 +44,6 @@
             android:id="@+id/tv_budget_title11"
             android:text="သတ်မှတ်သုံးမည့်ပမာဏ"
             android:textSize="16sp"
-            android:textStyle="bold"
             android:textColor="@color/textColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -78,7 +80,6 @@
             android:gravity="center"
             android:layout_alignParentLeft="true"
             android:text="စတင်အသုံးပြုမည့်ရက်"
-            android:textStyle="bold"
             android:textColor="@color/textColor"
             android:layout_below="@id/et_budget_bgamount"
             android:layout_width="wrap_content"
@@ -104,7 +105,6 @@
             android:gravity="center"
             android:layout_alignParentLeft="true"
             android:text="အသုံးပြုမည့်အချိန်အပိုင်းအခြား"
-            android:textStyle="bold"
             android:textColor="@color/textColor"
             android:layout_below="@id/tv_budget_title2"
             android:layout_width="wrap_content"
@@ -129,7 +129,6 @@
             android:gravity="center"
             android:layout_alignParentLeft="true"
             android:text="နေ့စဥ်အသုံးစရိတ်ပေးပို့ရန်"
-            android:textStyle="bold"
             android:textColor="@color/textColor"
             android:layout_below="@id/tv_budget_title3"
             android:layout_width="wrap_content"
@@ -145,6 +144,7 @@
             android:layout_height="wrap_content"
             />
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_budget_confirm"
             android:layout_marginLeft="30dp"
             android:background="@drawable/button_confirm_bg"
             android:layout_marginTop="16dp"
@@ -156,13 +156,14 @@
             android:layout_height="35dp" />
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_budget_cancel"
             android:layout_marginLeft="30dp"
             android:background="@drawable/button_cancel_bg"
             android:layout_marginTop="16dp"
             android:layout_below="@id/tv_budget_title4"
             android:text="ပယ်ဖျက်မည်"
             android:layout_marginRight="30dp"
-            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/btn_budget_confirm"
             android:elevation="30dp"
             android:layout_width="150dp"
             android:layout_height="35dp" />

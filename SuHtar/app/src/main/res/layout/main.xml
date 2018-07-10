@@ -10,14 +10,14 @@
         android:id="@+id/fr_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <include layout="@layout/activity_main"/>
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bnv_main"
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         app:itemBackground="@color/colorAccent"
         app:itemIconTint="@color/btn_confirm"
         app:itemTextColor="@android:color/white"

@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.main);
         ButterKnife.bind(this);
 
+        changeFragment(new HomeFragment());
         bnv_main.setOnNavigationItemSelectedListener(this);
 
     }

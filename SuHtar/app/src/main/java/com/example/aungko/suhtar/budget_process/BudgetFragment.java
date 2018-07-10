@@ -26,7 +26,7 @@ public class BudgetFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.budget,container,false);
-        ButterKnife.bind(this,view);
+      //  ButterKnife.bind(this,view);
         return view;
     }
 }
