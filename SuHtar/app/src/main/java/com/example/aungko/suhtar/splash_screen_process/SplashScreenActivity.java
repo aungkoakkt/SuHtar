@@ -14,13 +14,14 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.slider_1);
+        setContentView(R.layout.splash_screen);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
                 finish();
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         },1000);
     }
