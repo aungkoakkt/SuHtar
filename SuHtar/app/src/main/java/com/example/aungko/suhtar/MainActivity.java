@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
@@ -27,8 +28,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        ButterKnife.bind(this);
 
+        ButterKnife.bind(this);
         changeFragment(new HomeFragment());
         bnv_main.setOnNavigationItemSelectedListener(this);
 
@@ -39,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             startActivity(new Intent(this,IntroSliderActivity.class));
             finish();
         }
-
     }
 
     @Override
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.menu_profile:
                 //Check the Item
                 item.setChecked(true);
-             //   changeFragment(new BudgetFragment());
+                changeFragment(new WalletFragment());
                 break;
 
         }

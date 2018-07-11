@@ -3,10 +3,12 @@ package com.example.aungko.suhtar;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -26,12 +28,14 @@ public class IntroSliderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        if (!isFirstTimeStartApp()){
-//            startMainActivity();
-//            finish();
-//        }
-
         setContentView(R.layout.activity_intro_slider);
+/*        if (!isFirstTimeStartApp()){
+            startMainActivity();
+            finish();
+            Log.e("TR", "Nice to meet you");
+        }else {
+            Log.e("ER", "Something is going wrong");
+        }*/
 
         viewPager = findViewById(R.id.view_pager);
         dotLayout = findViewById(R.id.dotLayout);
@@ -88,7 +92,7 @@ public class IntroSliderActivity extends AppCompatActivity {
         setdot(0);
     }
 
-    private void startMainActivity() {
+    protected void startMainActivity() {
         setFirstFirstTimeStartApp(false);
         startActivity(new Intent(IntroSliderActivity.this, MainActivity.class));
         finish();

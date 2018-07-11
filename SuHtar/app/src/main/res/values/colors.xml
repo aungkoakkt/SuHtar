@@ -7,7 +7,14 @@
     <color name="colorBackground">#546785</color>
     <color name="textColor">#ffffff</color>
     <color name="edit_text_bgcolor">#5A7090</color>
-    <color name="btn_confirm">#EFC75E</color>
+    <color name="btn_confirm">#fbff00</color>
     <color name="btn_cancel">#d2c4c4c4</color>
-    <color name="color_category">#3A5175</color>
+    <color name="color_category">#344a6c</color>
+
+    <color name="nav_bott_color">#FF31333F</color>
+
+    <color name="back_color">#40516c</color>
+
+    <color name="app_bar_color">#435678</color>
+
 </resources>

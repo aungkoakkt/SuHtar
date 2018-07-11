@@ -11,4 +11,14 @@
     <string name="budget">သတ်မှတ်သုံးငွေ</string>
     <string name="profile">ကိုယ်ရေးအချက်အလက်</string>
     <string name="_0">0 ကျပ်</string>
+
+    <string name="target_amount">သတ်မှတ်သုံးမည့်ပမာဏ</string>
+    <string name="oneone">၁၀၀၀၀၀</string>
+    <string name="mmk">MMK</string>
+    <string name="begin_time">စတင်အသုံးပြုမည့်ရက်</string>
+    <string name="date">၄-၇-၂၀၁၈</string>
+    <string name="usage_duration">အသုံးပြုမည့်အချိန်အပိုင်းအခြား</string>
+    <string name="send_email">နေ့စဥ်အသုံးစရိတ်ပေးပို့ရန်</string>
+    <string name="make_confirm">အတည်ပြုမည်</string>
+    <string name="make_cancel">ပယ်ဖျက်မည်</string>
 </resources>
