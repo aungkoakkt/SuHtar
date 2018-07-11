@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <TextView
+            android:text="Expense"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/textColor"
+        android:text="အမျိုးအစား"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_work_24dp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="ပမာဏ"
+        android:textSize="16sp"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_bg1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="2dp"
+        android:text="၁၀၀၀၀၀"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:text="MMK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/textColor"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="မှတ်စု"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:padding="2dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_bg3"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLines="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="နေ့ရက်"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:padding="2dp"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_bg3"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="၉-၇-၂၀၁၈"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:text="အလိုအလျှောက်မှတ်သားခြင်း"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_cancel_bg"
+        android:text="ပယ်ဖျက်မည်"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_confirm_bg"
+        android:text="အတည်ပြုမည်"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+
+</android.support.constraint.ConstraintLayout>

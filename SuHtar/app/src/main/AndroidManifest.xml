@@ -11,20 +11,20 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".IntroSliderActivity"
-            android:theme="@style/Theme.Transparent">
-
-        </activity>
-        <activity
-            android:name=".MainActivity">
-
+            android:name=".splash_screen_process.SplashScreenActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".IntroSliderActivity"
+            android:theme="@style/Theme.Transparent">
 
         </activity>
+        <activity android:name=".MainActivity"/>
 
     </application>
 
