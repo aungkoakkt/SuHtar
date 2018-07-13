@@ -41,7 +41,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
@@ -70,7 +70,8 @@
                 android:gravity="center|left"
                 android:inputType="number"
                 android:paddingStart="4dp"
-                android:text="@string/oneone"
+                android:hint="@string/oneone"
+                android:textColorHint="@color/textColor"
                 android:textColor="@color/textColor"
                 android:textSize="16sp"
                 tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry" />
@@ -167,7 +168,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <android.support.v7.widget.AppCompatButton
+                <Button
                     android:layout_weight="1"
                     android:id="@+id/btn_budget_confirm"
                     android:layout_width="150dp"
@@ -181,7 +182,7 @@
                     android:layout_width="10dp"
                     android:layout_height="35dp"/>
 
-                <android.support.v7.widget.AppCompatButton
+                <Button
                     android:layout_weight="1"
                     android:id="@+id/btn_budget_cancel"
                     android:layout_width="150dp"
