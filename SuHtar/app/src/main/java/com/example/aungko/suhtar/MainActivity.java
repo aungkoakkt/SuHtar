@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             startActivity(new Intent(this,IntroSliderActivity.class));
             finish();
         }
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
     @Override
