@@ -21,4 +21,13 @@
     <string name="send_email">နေ့စဥ်အသုံးစရိတ်ပေးပို့ရန်</string>
     <string name="make_confirm">အတည်ပြုမည်</string>
     <string name="make_cancel">ပယ်ဖျက်မည်</string>
+
+    <string name="Toolbar_Title">သတ်မှတ်သုံးေငွ</string>
+    <string name="welcome">ကြိုဆိုပါတယ်</string>
+    <string name="initial_value">ကနဦးပိုက်ဆံ</string>
+    <string name="one_hundred_thousand">၁၀၀၀၀၀ ကျပ်</string>
+    <string name="own_budget">လက်ရှိပိုက်ဆံ</string>
+    <string name="floating_amount">၁၄၅၄၀၀ ကျပ်</string>
+    <string name="income_category">၀င်ငွေအမျိုးအစား</string>
+    <string name="expend_category">ထွက်ငွေအမျိုးအစား</string>
 </resources>
