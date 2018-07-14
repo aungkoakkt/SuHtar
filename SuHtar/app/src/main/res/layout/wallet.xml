@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_color">
@@ -41,18 +42,20 @@
         app:layout_constraintTop_toBottomOf="@+id/tb_budget" />
 
     <EditText
-        android:id="@+id/one_hundred_thousand"
+        android:id="@+id/et_one_hundred_thousand"
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/textColor"
         android:background="@drawable/edit_text_bg1"
         android:ems="10"
+        android:maxLength="9"
+        android:hint="@string/oneone"
         android:inputType="number"
         android:padding="2dp"
-        android:hint="@string/one_hundred_thousand"
-        android:textColorHint="@color/textColor"
+        android:textColorHint="#56ffffff"
         app:layout_constraintEnd_toStartOf="@+id/edit_text_bg2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/initial_value" />
@@ -67,7 +70,7 @@
         android:gravity="center"
         android:text="@string/mmk"
         android:textColor="@color/textColor"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_wallet_save"
         app:layout_constraintTop_toBottomOf="@+id/initial_value" />
 
     <TextView
@@ -81,7 +84,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/own_budget"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/one_hundred_thousand" />
+        app:layout_constraintTop_toBottomOf="@+id/et_one_hundred_thousand" />
 
     <TextView
         android:id="@+id/floating_amount"
@@ -95,15 +98,13 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/own_budget"
-        app:layout_constraintTop_toBottomOf="@+id/one_hundred_thousand" />
+        app:layout_constraintTop_toBottomOf="@+id/et_one_hundred_thousand" />
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="368dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:background="@color/color_category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,6 +138,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+    <Button
+        android:id="@+id/btn_wallet_save"
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:background="@drawable/button_confirm_bg"
+        android:text="သိမ်းမည်"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/initial_value" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -14,9 +14,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.aungko.suhtar.MainApplication;
+
+import java.util.List;
 
 import me.myatminsoe.mdetect.MDetect;
 
@@ -63,8 +66,8 @@ public class FontEmbedder {
         force(button, button.getText().toString());
     }
 
-    public static void EditTextforce(final EditText editText, String text, String hint){
-        editText.setText(Moulder.mercyOnZgUser(text));
+    public static void EditTextforce(final EditText editText, String hint){
+
         editText.setHint(Moulder.mercyOnZgUser(hint));
 
         editText.setTypeface(typeface);
@@ -140,5 +143,9 @@ public class FontEmbedder {
             }
             BtnNavViewforce(mi);
         }
+    }
+
+    public static void spinnerFont(Spinner spinner){
+
     }
 }

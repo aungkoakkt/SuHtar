@@ -35,4 +35,9 @@ public class BudgetSchedule {
     public void setBudget_schedule_name(String budget_schedule_name) {
         this.budget_schedule_name = budget_schedule_name;
     }
+
+    @Override
+    public String toString() {
+        return budget_schedule_name;
+    }
 }

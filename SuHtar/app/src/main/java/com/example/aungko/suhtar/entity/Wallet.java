@@ -8,8 +8,8 @@ public class Wallet {
 
     @PrimaryKey(autoGenerate = true)
     private long wallet_id;
-    private int wallet_amount;
-    private int wallet_initial_amount;
+    private int wallet_amount=0;
+    private int wallet_initial_amount=0;
 
     public long getWallet_id() {
         return wallet_id;

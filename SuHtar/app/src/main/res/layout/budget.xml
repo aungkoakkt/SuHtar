@@ -63,6 +63,7 @@
             <EditText
                 android:id="@+id/et_budget_bgamount"
                 android:layout_width="300dp"
+                android:maxLength="9"
                 android:layout_height="30dp"
                 android:layout_below="@id/tv_budget_title11"
                 android:layout_marginTop="8dp"
@@ -71,7 +72,7 @@
                 android:inputType="number"
                 android:paddingStart="4dp"
                 android:hint="@string/oneone"
-                android:textColorHint="@color/textColor"
+                android:textColorHint="#56ffffff"
                 android:textColor="@color/textColor"
                 android:textSize="16sp"
                 tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry" />
@@ -102,16 +103,16 @@
                 android:textColor="@color/textColor"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/tv_budget_start_date"
+            <Button
+                android:id="@+id/btn_budget_start_date"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/et_budget_bgamount"
                 android:layout_marginEnd="5dp"
                 android:layout_marginTop="12dp"
+                android:background="@drawable/spinner_bg"
                 android:gravity="center"
-                android:text="@string/date"
                 android:textColor="@color/textColor"
                 android:textSize="16sp" />
 
@@ -123,21 +124,44 @@
                 android:layout_below="@id/tv_budget_title2"
                 android:layout_marginTop="12dp"
                 android:gravity="center"
+                android:layout_marginRight="15dp"
                 android:text="@string/usage_duration"
                 android:textColor="@color/textColor"
                 android:textSize="16sp" />
 
-            <Spinner
+            <RelativeLayout
                 android:id="@+id/tv_budget_period"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
+                android:layout_toRightOf="@id/tv_budget_title3"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/tv_budget_title2"
                 android:layout_marginEnd="5dp"
                 android:layout_marginTop="12dp"
+                android:background="@drawable/spinner_bg"
                 android:gravity="center"
                 android:textColor="@color/textColor"
-                android:textSize="16sp" />
+                android:textSize="16sp" >
+
+                <Spinner
+                    android:id="@+id/sp_budget_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+                <ImageView
+                    android:id="@+id/img_budget_drop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_keyboard_arrow_down_24dp" />
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/tv_budget_title4"
@@ -197,19 +221,5 @@
         </RelativeLayout>
 
     </android.support.constraint.ConstraintLayout>
-
-    <!--    <RelativeLayout
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_budget"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-               />
-        </RelativeLayout>-->
-
-
 
 </android.support.constraint.ConstraintLayout>

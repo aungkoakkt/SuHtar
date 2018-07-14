@@ -13,6 +13,9 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.example.aungko.suhtar.budget_process.BudgetFragment;
+import com.example.aungko.suhtar.database.SuHtarDB;
+import com.example.aungko.suhtar.entity.BudgetSchedule;
+import com.example.aungko.suhtar.entity.Wallet;
 import com.example.aungko.suhtar.home_process.HomeFragment;
 import com.example.aungko.suhtar.wallet_process.WalletFragment;
 
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @BindView(R.id.fr_main)FrameLayout fr_main;
     @BindView(R.id.bnv_main)BottomNavigationView bnv_main;
+    private SuHtarDB db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +41,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         boolean flag= sharedPreferences.getBoolean("SuHtar", true);
 
         if(flag){
+            db=SuHtarDB.getDatabase(this);
+            db.getBudgetScheduleDao().addBudgetSchedule(new BudgetSchedule("၁ ပတ်"));
+            db.getBudgetScheduleDao().addBudgetSchedule(new BudgetSchedule("၂ ပတ်"));
+            db.getBudgetScheduleDao().addBudgetSchedule(new BudgetSchedule("၃ ပတ်"));
+            db.getBudgetScheduleDao().addBudgetSchedule(new BudgetSchedule("၁ လ"));
+            db.getWalletDao().addWallet(new Wallet());
             startActivity(new Intent(this,IntroSliderActivity.class));
             finish();
+
         }
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
