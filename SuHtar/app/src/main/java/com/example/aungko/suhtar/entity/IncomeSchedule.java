@@ -36,4 +36,9 @@ public class IncomeSchedule {
     public void setIncome_schedule_name(String income_schedule_name) {
         this.income_schedule_name = income_schedule_name;
     }
+
+    @Override
+    public String toString() {
+        return income_schedule_name;
+    }
 }

@@ -36,4 +36,9 @@ public class ExpenseSchedule {
     public void setExpense_schedule_name(String expense_schedule_name) {
         this.expense_schedule_name = expense_schedule_name;
     }
+
+    @Override
+    public String toString() {
+        return expense_schedule_name;
+    }
 }

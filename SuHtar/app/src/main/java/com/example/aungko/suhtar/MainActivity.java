@@ -15,6 +15,10 @@ import android.widget.FrameLayout;
 import com.example.aungko.suhtar.budget_process.BudgetFragment;
 import com.example.aungko.suhtar.database.SuHtarDB;
 import com.example.aungko.suhtar.entity.BudgetSchedule;
+import com.example.aungko.suhtar.entity.ExpenseCategory;
+import com.example.aungko.suhtar.entity.ExpenseSchedule;
+import com.example.aungko.suhtar.entity.IncomeCategory;
+import com.example.aungko.suhtar.entity.IncomeSchedule;
 import com.example.aungko.suhtar.entity.Wallet;
 import com.example.aungko.suhtar.home_process.HomeFragment;
 import com.example.aungko.suhtar.wallet_process.WalletFragment;
@@ -47,10 +51,31 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             db.getBudgetScheduleDao().addBudgetSchedule(new BudgetSchedule("၃ ပတ်"));
             db.getBudgetScheduleDao().addBudgetSchedule(new BudgetSchedule("၁ လ"));
             db.getWalletDao().addWallet(new Wallet());
+
+            db.getIncomeCategoryDao().addIncomeCategory(new IncomeCategory("Salary","salary icon"));
+            db.getIncomeCategoryDao().addIncomeCategory(new IncomeCategory("Pocket","pocket icon"));
+            db.getIncomeCategoryDao().addIncomeCategory(new IncomeCategory("Other","other icon"));
+
+            db.getExpenseCategoryDao().addExpenseCategory(new ExpenseCategory("Food","food icon"));
+            db.getExpenseCategoryDao().addExpenseCategory(new ExpenseCategory("Transport","transport icon"));
+            db.getExpenseCategoryDao().addExpenseCategory(new ExpenseCategory("Entertainment","entertainment icon"));
+
+            db.getExpenseScheduleDao().addExpenseSchedule(new ExpenseSchedule("TRUE"));
+            db.getExpenseScheduleDao().addExpenseSchedule(new ExpenseSchedule("FALSE"));
+
+            db.getIncomeScheduleDao().addIncomeSchedule(new IncomeSchedule("Done"));
+            db.getIncomeScheduleDao().addIncomeSchedule(new IncomeSchedule("UnDone"));
+
             startActivity(new Intent(this,IntroSliderActivity.class));
             finish();
 
         }
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 
